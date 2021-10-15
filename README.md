@@ -1,2 +1,12 @@
 # jcalgtest_results
-Datasets with results collected from JCAlgTest benchmarking tool
+Datasets with results as collected by (JCAlgTest benchmarking tool)[https://github.com/crocs-muni/JCAlgTest]
+
+
+
+
+
+
+
+
+
+
