@@ -1,0 +1,111 @@
+<html lang="en">
+ <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="The JCAlgTest is a tool designed for automatic gathering various performance properties of Java cards. ">
+	<meta name="author" content="JCAlgTest">
+	<title>Card performance - comparative graph</title>
+	<link href="./dist/css/bootstrap.min.css" rel="stylesheet">
+<script type="text/javascript" src="./dist/jquery-2.2.3.min.js"></script>
+	<link href="./assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./dist/style.css">
+ </head>
+
+ <body style="margin-top:50px; padding:20px">
+
+ 	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+		<script type="text/javascript" src="header.js"></script>
+		</div>
+	</nav>
+
+	<script type="text/javascript">
+	google.setOnLoadCallback(drawChart);
+	function drawChart() {
+		var data = new google.visualization.DataTable();
+		data.addColumn('string', 'function');
+		data.addColumn('number', 'Athena IDProtect');
+		data.addColumn('number', 'G+D Smartcafe 3.2 72K');
+		data.addColumn('number', 'G+D Smartcafe 6.0 80K');
+		data.addColumn('number', 'G+D Smartcafe Expert 4.x V2');
+		data.addColumn('number', 'Gemplus GXP R4 72K');
+		data.addColumn('number', 'Infineon CJTOP 80K INF SLJ 52GLA080AL M8.4');
+		data.addColumn('number', 'JavaCOS A22 CR-ECC-SHA-2');
+		data.addColumn('number', 'JavaCOS A22');
+		data.addColumn('number', 'JavaCOS A40');
+		data.addColumn('number', 'NXP CJ3A081');
+		data.addColumn('number', 'NXP J2D081 80K');
+		data.addColumn('number', 'NXP J3A080');
+		data.addColumn('number', 'J3H081 EMV');
+		data.addColumn('number', 'NXP JCOP21 v2.4.2R3');
+		data.addColumn('number', 'NXP JCOP31 v2.4.1 72K');
+		data.addColumn('number', 'NXP JCOP41 v2.2.1 72K');
+		data.addColumn('number', 'NXP JCOP 21 V2.2 36K');
+		data.addColumn('number', 'NXP JCOP 31 V2.2 36K');
+		data.addColumn('number', 'NXP JCOP CJ2A081');
+		data.addColumn('number', 'Oberthur ID-ONE Cosmo 64 RSA v5.4');
+		data.addColumn('number', 'Softlock SLCOS InfineonSLE78');
+		data.addColumn('number', 'Feitian JavaCOS 3.0.4 e2');
+		data.addColumn('number', 'JavaCOS A40(2)');
+		data.addColumn('number', 'NXP 2.4.1 R3');
+		data.addColumn('number', 'NXP CJ2A081');
+		data.addColumn('number', 'NXP J2A080 80K(2)');
+		data.addColumn('number', 'NXP J2E081');
+		data.addColumn('number', 'NXP JCOP4 P71D321');
+		data.addColumn('number', 'NXP JCOP4 J3R180 P71');
+		data.addColumn('number', 'NXP JCOP3 J3H145g P60');
+		data.addColumn('number', 'SECORA ID X');
+		data.addColumn('number', 'Feitian JavaSD');
+		data.addColumn('number', 'NXP J3H145 RSA4096');
+		data.addColumn('number', 'NXP J3H145 RSA4096 enabled SCP03');
+		data.addColumn('number', 'SECORA ID S (SCP02 with RSA2k JC305 GP230)');
+		data.addColumn('number', 'Infineon SECORA ID X Batch 16072021 SALES');
+		data.addColumn('number', 'Infineon SPA1-1 ThothTrust Edition');
+		data.addColumn('number', 'JC30M48CR');
+		data.addRows([
+		['SECURE RANDOM (256B)', 0.93, 0.87, 0.94, -0.10, 0.99, 0.92, 0.96, 0.96, 0.97, 0.96, 0.97, 0.93, 0.99, 0.90, 0.94, 0.98, 0.98, 0.98, 0.96, 0.84, 0.90, 0.97, 0.98, 0.96, 0.96, 0.94, -0.10, 1.00, 1.00, -0.10, 0.98, 0.97, 1.00, 1.00, 0.98, 0.94, 0.98, 0.97, ],
+		['SHA-1 hash (256B)', 0.91, -0.10, 0.83, 0.46, 0.94, 0.72, 0.93, 0.93, 0.94, 0.82, 0.81, 0.43, 0.89, 0.80, 0.45, 0.65, 0.66, 0.68, 0.81, 0.62, 0.59, 0.94, 0.94, 0.82, 0.81, 0.51, -0.10, 0.91, 0.91, -0.10, 0.82, 0.92, 0.87, 0.87, 0.82, 0.28, 0.83, 0.83, ],
+		['SHA2-256 hash (256B)', 0.90, -0.10, 0.66, -0.10, -0.10, 0.69, 0.61, 0.65, 0.69, 0.82, 0.81, 0.39, 0.94, 0.80, 0.42, -0.10, -0.10, -0.10, 0.80, -0.10, 0.68, 0.69, 0.76, 0.81, 0.81, 0.48, -0.10, 0.93, 0.93, -0.10, 0.88, 0.75, 0.92, 0.92, -0.10, 0.40, 0.87, 0.76, ],
+		['3DES encrypt (256B)', 0.61, 0.68, 0.96, 0.80, 0.71, 0.67, 0.97, 0.97, 0.98, 0.93, 0.96, 0.89, 0.95, 0.93, 0.89, 0.96, 0.96, 0.96, 0.93, 0.91, 0.99, 0.98, 0.98, 0.27, 0.28, -0.10, -0.10, 0.99, 0.99, -0.10, 1.00, 0.97, 0.95, 0.95, 0.99, 0.97, 1.00, 0.98, ],
+		['AES128 encrypt (256B)', 0.89, 0.82, 0.76, -0.10, 0.72, 0.72, 0.95, 0.96, 0.97, 0.89, 0.93, 0.77, 0.90, 0.87, 0.78, -0.10, -0.10, -0.10, 0.88, -0.10, 0.97, 0.96, 0.96, 0.30, 0.31, -0.10, -0.10, 0.98, 0.98, -0.10, 0.99, 0.95, 0.90, 0.89, 0.98, 0.92, 0.99, 0.97, ],
+		['AES256 encrypt (256B)', 0.89, 0.85, 0.81, -0.10, 0.73, 0.73, 0.96, 0.97, 0.97, 0.90, 0.93, 0.80, 0.91, 0.88, 0.81, -0.10, -0.10, -0.10, 0.90, -0.10, 0.98, 0.97, 0.97, 0.31, 0.31, -0.10, -0.10, 0.98, 0.98, -0.10, 1.00, 0.96, 0.92, 0.91, 0.99, 0.93, 0.99, 0.97, ],
+		['3DES setKey(192b)', 0.60, 0.66, 0.76, 0.92, 0.79, 0.85, 0.98, 0.98, 0.99, 0.75, 0.55, 0.65, 0.40, 0.30, 0.85, 0.65, 0.42, 0.42, 0.88, 0.43, 0.77, 0.99, 0.99, 0.75, 0.75, 0.73, 0.12, 0.92, 0.93, 0.75, 0.83, 0.97, -0.10, -0.10, 0.61, 0.26, 0.50, 0.76, ],
+		['AES setKey(128b)', 0.68, 0.74, 0.84, -0.10, 0.79, 0.86, 0.98, 0.98, 0.99, 0.75, 0.63, 0.72, 0.45, 0.47, 0.86, -0.10, -0.10, -0.10, 0.88, -0.10, 0.84, 0.99, 0.98, 0.69, 0.69, 0.73, 0.42, 0.92, 0.93, 0.82, 0.85, 0.97, -0.10, -0.10, 0.63, 0.29, 0.51, 0.99, ],
+		['AES setKey(256b)', 0.62, 0.64, 0.74, -0.10, 0.79, 0.85, 0.98, 0.98, 0.99, 0.75, 0.61, 0.64, 0.39, 0.43, 0.84, -0.10, -0.10, -0.10, 0.88, -0.10, 0.83, 0.99, 0.98, 0.68, 0.69, 0.72, 0.31, 0.92, 0.93, 0.75, 0.82, 0.97, -0.10, -0.10, 0.59, 0.23, 0.47, 0.99, ],
+		['SWAES oneblock (16B)', 0.90, 0.69, -0.10, 0.80, 0.95, 0.37, 0.76, -0.10, -0.10, 0.85, 0.88, 0.76, 0.88, 0.88, 0.78, 0.83, 0.84, 0.84, 0.84, -0.10, 0.51, 0.89, 0.85, 0.84, 0.85, 0.79, -0.10, 0.92, 0.92, 0.85, 0.84, 0.80, -0.10, 0.85, 0.86, 0.68, 0.86, 0.89, ],
+		[' arrayCopy nonAtomic RAM2RAM (256B)', 0.95, 0.81, -0.10, 0.88, 0.92, 0.63, 0.90, -0.10, -0.10, 0.91, 0.92, 0.85, 0.94, 0.92, 0.86, 0.83, 0.85, 0.86, 0.91, -0.10, 0.79, 0.93, 0.94, 0.91, 0.91, 0.87, -0.10, 0.97, 0.97, 0.93, 0.96, 0.78, -0.10, 0.92, 0.97, 0.90, 0.96, 0.94, ],
+		[' arrayCopy nonAtomic EEPROM2EEPROM (256B)', 0.99, 0.89, -0.10, 0.95, 0.75, 0.94, 0.96, -0.10, -0.10, 0.95, 0.95, 0.90, 0.98, 0.95, 0.91, 0.92, 0.92, 0.92, 0.95, -0.10, 0.81, 0.98, 0.98, 0.95, 0.95, 0.91, -0.10, 0.85, 0.93, 0.96, 0.99, 0.97, -0.10, 0.95, 0.99, 0.98, 0.99, 0.98, ],
+		['RSA1024 CRT decrypt', 0.73, 0.54, 0.82, 0.68, -0.10, 0.74, -0.10, 0.93, 0.94, 0.79, 0.71, 0.68, -0.10, 0.63, 0.68, 0.73, 0.73, 0.73, 0.79, 0.58, 0.86, -0.10, -0.10, 0.79, 0.79, 0.69, -0.10, 0.96, 0.96, -0.10, 0.94, -0.10, -0.10, 0.85, 0.93, 0.79, 0.93, 0.93, ],
+		['RSA1024 CRT encrypt', -0.10, 0.47, 0.81, 0.73, 0.50, 0.69, -0.10, 0.89, 0.91, 0.77, 0.75, 0.63, -0.10, 0.75, 0.64, 0.68, 0.69, 0.69, 0.77, -0.10, 0.85, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.92, 0.93, -0.10, 1.47, -0.10, -0.10, -0.10, 1.28, 1.50, 1.40, 0.90, ],
+		['RSA2048 CRT decrypt', 0.72, 0.47, 0.70, 0.73, -0.10, 0.85, -0.10, 0.90, 0.91, 0.73, 0.62, 0.59, -0.10, 0.59, 0.59, 0.61, 0.61, 0.60, 0.73, 0.44, 0.91, -0.10, -0.10, 0.73, 0.73, 0.59, -0.10, 0.97, 0.97, -0.10, 0.96, -0.10, -0.10, 0.87, 0.96, 0.87, 0.96, 0.90, ],
+		['RSA2048 CRT encrypt', -0.10, 0.61, 0.82, 0.52, 0.40, 0.77, -0.10, 0.88, 0.89, 0.73, 0.76, 0.57, -0.10, 0.76, 0.58, 0.60, 0.61, 0.61, 0.73, -0.10, 0.89, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.94, 0.95, -0.10, 1.21, -0.10, -0.10, 0.84, 1.12, 1.22, 1.18, 0.89, ],
+		['RSA1024 CRT generate', 0.42, 0.36, 0.66, 0.64, 0.62, 0.74, 0.60, 0.84, 0.88, 0.76, 0.45, 0.53, -0.10, 0.56, 0.64, 0.70, 0.61, 0.71, 0.70, -0.10, 0.82, 0.91, 0.85, 0.68, 0.74, 0.58, -0.10, 0.86, 0.88, 0.77, 1.06, 0.88, -0.10, 0.69, 1.00, 0.76, 0.94, 0.82, ],
+		['RSA2048 CRT generate', 0.59, 0.74, 0.80, 0.80, 0.75, 0.83, 0.83, 0.89, 0.86, 0.74, 0.72, 0.59, -0.10, 0.69, 0.54, 0.67, 0.59, 0.62, 0.68, -0.10, 0.86, 0.90, 0.87, 0.74, 0.74, 0.64, -0.10, 0.93, 0.93, 0.89, 0.97, 0.83, -0.10, 0.90, 0.96, 0.81, 0.94, 0.86, ],
+		['RSA1024 decrypt', 0.04, 0.05, 0.47, -0.10, 0.07, 0.72, -0.10, 0.83, 0.83, -0.10, 0.32, -0.10, -0.10, 0.30, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.84, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.93, 0.94, -0.10, 0.91, -0.10, -0.10, -0.10, 0.91, 0.45, 0.91, 0.83, ],
+		['RSA1024 encrypt', 0.90, 0.48, 0.81, -0.10, 0.50, 0.69, -0.10, 0.89, 0.91, -0.10, 0.75, -0.10, -0.10, 0.75, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.84, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.92, 0.93, -0.10, 1.22, -0.10, -0.10, -0.10, 1.15, 1.36, 1.20, 0.90, ],
+		['RSA2048 decrypt', 0.10, 0.09, 0.44, -0.10, 0.59, 0.76, -0.10, 0.79, 0.80, -0.10, 0.32, -0.10, -0.10, 0.31, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.85, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.95, 0.95, -0.10, 0.93, -0.10, -0.10, -0.10, 0.92, 0.81, 0.93, 0.80, ],
+		['RSA2048 encrypt', 0.88, 0.61, 0.82, -0.10, 0.41, 0.77, -0.10, 0.88, 0.89, -0.10, 0.76, -0.10, -0.10, 0.76, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.89, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.94, 0.95, -0.10, 1.09, -0.10, -0.10, -0.10, 1.06, 1.13, 1.08, 0.89, ],
+		['RSA1024 generate', 0.57, 0.46, 0.70, -0.10, 0.70, 0.71, 0.73, 0.78, 0.85, -0.10, 0.44, -0.10, -0.10, 0.49, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.86, 0.81, 0.82, -0.10, -0.10, -0.10, -0.10, 0.87, 0.85, 0.75, 0.89, 0.76, -0.10, 0.71, 0.88, 0.71, 0.96, 0.86, ],
+		['RSA2048 generate', 0.41, 0.67, 0.69, -0.10, 0.57, 0.64, 0.68, 0.74, 0.79, -0.10, 0.47, -0.10, -0.10, 0.39, -0.10, -0.10, -0.10, -0.10, -0.10, -0.10, 0.85, 0.83, 0.79, -0.10, -0.10, -0.10, -0.10, 0.90, 0.88, 0.85, 0.93, 0.68, -0.10, 0.83, 0.91, 0.76, 0.92, 0.78, ],
+		]);
+
+		var options = {
+		title: 'Card compare',
+		lineWidth: 1,
+		hAxis: {title: 'Name of function' },
+		vAxis: {title: 'Speed | higher=faster | -0.1=Not Supported', viewWindow: {min: -0.15, max: 1.0} },
+		legend: { position: 'right' }};
+		var chart = new google.visualization.LineChart(document.getElementById('card_compare'));
+		chart.draw(data, options);}
+	</script>
+
+	<div id="card_compare" style="width: 100%; height: 100%; min-width:1300px; min-height:700px; margin-left:-50px;"></div>
+	<script type="text/javascript" src="footer.js"></script>
+<a href="#" class="back-to-top"></a>	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+	<script src="./dist/js/bootstrap.min.js"></script>
+	<script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+ </body>
+</html>
