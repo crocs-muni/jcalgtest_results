@@ -10339,14 +10339,6 @@ operation raw measurements (ms):;685.25;441.25;444.25;444.25;445.25;444.25;444.2
 operation stats (ms/op):;avg op:;468.15;min op:;441.25;max op:;685.25;;CHECK
 operation info:;data length;-1;total iterations;10;total invocations;10;
 
-method name:; ALG_EC_FP LENGTH_EC_FP_384 KeyPair_genKeyPair()
-measurement config:;appletPrepareINS;36;appletMeasureINS;45;config;00 19 ff ff 00 05 ff ff 01 80 00 01 ff ff ff ff ff ff 00 01 00 01
-baseline measurements (ms):;62.00;71.00;67.00;66.00;67.00;
-baseline stats (ms):;avg:;67.75;min:;62.00;max:;71.00;;;CHECK
-operation raw measurements (ms):;1453.25;962.25;951.25;954.25;950.25;953.25;946.25;955.25;953.25;952.25;
-operation stats (ms/op):;avg op:;1003.15;min op:;946.25;max op:;1453.25;;CHECK
-operation info:;data length;-1;total iterations;10;total invocations;10;
-
 method name:; ALG_EC_FP LENGTH_EC_FP_320 KeyPair_genKeyPair()
 measurement config:;appletPrepareINS;36;appletMeasureINS;45;config;00 19 ff ff 00 05 ff ff 01 40 00 01 ff ff ff ff ff ff 00 01 00 01
 baseline measurements (ms):;57.00;62.00;63.00;63.00;64.00;
@@ -10356,7 +10348,12 @@ operation stats (ms/op):;avg op:;697.10;min op:;659.00;max op:;1002.00;;CHECK
 operation info:;data length;-1;total iterations;10;total invocations;10;
 
 method name:; ALG_EC_FP LENGTH_EC_FP_384 KeyPair_genKeyPair()
-ALREADY_MEASURED
+measurement config:;appletPrepareINS;36;appletMeasureINS;45;config;00 19 ff ff 00 05 ff ff 01 80 00 01 ff ff ff ff ff ff 00 01 00 01
+baseline measurements (ms):;62.00;71.00;67.00;66.00;67.00;
+baseline stats (ms):;avg:;67.75;min:;62.00;max:;71.00;;;CHECK
+operation raw measurements (ms):;1453.25;962.25;951.25;954.25;950.25;953.25;946.25;955.25;953.25;952.25;
+operation stats (ms/op):;avg op:;1003.15;min op:;946.25;max op:;1453.25;;CHECK
+operation info:;data length;-1;total iterations;10;total invocations;10;
 
 method name:; ALG_EC_FP LENGTH_EC_FP_512 KeyPair_genKeyPair()
 measurement config:;appletPrepareINS;36;appletMeasureINS;45;config;00 19 ff ff 00 05 ff ff 02 00 00 01 ff ff ff ff ff ff 00 01 00 01
