@@ -1,0 +1,21 @@
+
+ATR = 3B670000B74040419B9000
+
+CPLC: ICFabricator=4750
+      ICType=0015
+      OperatingSystemID=4841
+      OperatingSystemReleaseDate=3200 (2013-07-19)
+      OperatingSystemReleaseLevel=0007
+      ICFabricationDate=6155 (2016-06-03)
+      ICSerialNumber=2AE08C20
+      ICBatchIdentifier=F6A8
+      ICModuleFabricator=0512
+      ICModulePackagingDate=7196 (2017-07-15)
+      ICCManufacturer=0513
+      ICEmbeddingDate=7196 (2017-07-15)
+      ICPrePersonalizer=0514
+      ICPrePersonalizationEquipmentDate=7196 (2017-07-15)
+      ICPrePersonalizationEquipmentID=14020000
+      ICPersonalizer=2045
+      ICPersonalizationDate=7242 (2017-08-30)
+      ICPersonalizationEquipmentID=00002203
